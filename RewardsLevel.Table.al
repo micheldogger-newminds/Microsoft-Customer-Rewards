@@ -21,16 +21,31 @@ table 50100 "Reward Level"
             end;
         }
     }
+
+
+    keys
+    {
+        key(PK; Level)
+        {
+            Clustered = true;
+        }
+        key("Minimum Reward Points"; "Minimum Reward Points")
+        {
+
+        }
+    }
+
+    trigger OnInsert();
+    begin
+        Validate("Minimum Reward Points");
+    end;
+
+    trigger OnModify();
+    begin
+        Validate("Minimum Reward Points");
+    end;
+
 }
 
-keys
-{
-    key(PK; Level)
-    {
-        Clustered = true;
-    }
-    key("Minimum Reward Points;")
-    {
-        
-    }
-}
+
+
