@@ -22,3 +22,15 @@ table 50100 "Reward Level"
         }
     }
 }
+
+keys
+{
+    key(PK; Level)
+    {
+        Clustered = true;
+    }
+    key("Minimum Reward Points;")
+    {
+        
+    }
+}
